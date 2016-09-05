@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About John Cosentino</title>
+    <p id="PostTitle">Welcome to my website!</p>
+<style>
+#meImage {
+    max-width: 500px;
+    max-height: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: gray;
+}
+
+#PostTitle{
+    font-family: cursive;
+    color: white;
+    font-size: 67px;
+    text-align: center;
+}
+
+#someInfo{
+    text-decoration: underline;
+    font-size: 30px;
+    color:#8C240E;
+}
+
+#buttonClickMe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 88px;
+    font-size: 36px;
+    line-height: normal;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.jobTitles{
+    text-decoration: underline, italic;
+    font-style: sans;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color:green;
+}
+
+a:visited{
+    color:red;
+}
+
+a:hover{
+    text-decoration: underline;
+    color:blue;
+}
+
+a:active{
+    color:yellow;
+    font-style: italic;
+}
+
+.unhider{
+    display: none;
+}
+
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 5.0s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:72%;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    width:72%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+    width: 72%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+    <link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <p align="center">Click the picture below:</p>
+    <img id="meImage" onclick="picAlert()" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/6843_10153962927390120_4047776758976720930_n.jpg?oh=347d7ce1b6c45725654e0ae42ad43fd8&oe=58571DA3" />
+  <p><button id="buttonClickMe" onclick="clickToggleVisible()" type="button" class="btn btn-primary btn-lg")>CLICK ME!</button></p>
+<div class="unhider">
+<h2 align="center" style="color:#762918">Some information about me:</h2>
+<button class="accordion">Higher Education</button>
+<div class="panel">
+  <p>
+        <ul>
+            <p>The College of Staten Island</p>
+            <li>Bachelors of Science, Computer Science (2017)</li>
+            <li>Bachelors of Science, Psychology (2014)</li>
+            <li>Minor in Mathematics (2017)</li>
+        </ul>
+    </p>
+    <p>I also completed one semester of graduate school in CSI's MS in Neroscience</p>
+</div>
+<button class="accordion">Related Skills</button>
+<div class="panel">
+  <p>
+        <ul>
+            <li>C++</li>
+            <li>C#</li>
+            <li>MySQL</li>
+            <li>Microsoft Visual Studio</li>
+            <li>Microsoft Word / Excel / PowerPoint</li>
+            <li>Proficiency in Windows XP, Vista, 7, 8, 10, Mac OS X, Ubuntu, Arch, Kali, Other UNIX</li>
+        </ul>
+    </p>
+</div>
+
+<button class="accordion">Professional Experience</button>
+<div id="foo" class="panel">
+  <p class="jobTitles">Helpdesk Analyst</p>
+  <p>Office of Information Technology - CSI</p>
+  <p>Staten Island, NY</p>
+  <p>March 2016 - present</p>
+  <p class="jobTitles">CUNY Tech Prep</p>
+  <p>The City University of New York</p>
+  <p>New York, NY</p>
+  <p>July 2016 - present</p>
+  <p class="jobTitles">Project Reach</p>
+  <p>The College of Staten Island</p>
+  <p>Staten Island, NY</p>
+  <p>August 2015 - present</p>
+  <p class="jobTitles">CUNY Service Corps</p>
+  <p>The City University of New York</p>
+  <p>New York, NY</p>
+  <p>September 2013 - May 2014</p>
+  <p class="jobTitles">Political Assistant</p>
+  <p>John Catsimatidis Campaign for NYC</p>
+  <p>New York, NY</p>
+  <p>July 2013 - September 2013</p>
+</div>
+
+<button class="accordion">Interests</button>
+<div id="foo" class="panel">
+  <p>
+      <ul>
+        <li>NY Yankees</li>
+        <li>NY Knicks</li>
+        <li>Green Bay Packers</li>
+        <li>My favorite movie is Let the Right One In (Sweden)</li>
+        <li>Pokemon is a way of life</li>
+        <li>Arch Linux master race!</li>
+        <li>Java made programming after C++ so much better</li>
+        <li>I like breaking things, rebuilding them, and figuring out why this process happened the way it did</li>
+      </ul>
+  </p>
+</div>
+
+<button class="accordion">Recommended Reading</button>
+<div id="foo" class="panel">
+  <p>
+      <ul>
+        <li><a href="https://www.phoronix.com/">Phoronix</a></li>
+        <li><a href="https://www.eff.org/">EFF</a></li>
+        <li><a href="http://www.investopedia.com/">Investopedia</a></li>
+        <li><a href="https://autisticadvocacy.org/">ASAN</a></li>
+        <li><a href="http://www.theatlantic.com/">The Atlantic</a></li>
+        <li><a href="http://www.sports-reference.com/">Literally every sports statistic you'd ever want</a></li>
+        <li><a href="http://www.xda-developers.com/">XDA Developers</a></li>
+      </ul>
+  </p>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+function picAlert()
+{
+    alert("This is a picture of John Cosentino!");
+}
+
+function clickToggleVisible(){
+    $('.unhider').toggle();
+}
+
+</script>
+
+</body>
+</html>
+
